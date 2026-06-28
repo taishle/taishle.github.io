@@ -1,0 +1,540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000">
+    <style type="text/css">
+        html, body {
+            overflow-y: scroll;
+        }
+
+        a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            background: #ffffff;
+            color: #252020;
+            transition: color 0.3s;
+        }
+
+        body.dark-theme {
+            background: #1a1a1a;
+            color: #d0d0d0;
+        }
+
+        body.dark-theme a {
+            color: #6f9ecf;
+        }
+
+        body.dark-theme a:focus,
+        body.dark-theme a:hover {
+            color: #e6b800;
+        }
+
+        body.dark-theme .navbar a {
+            color: #d0d0d0;
+        }
+
+        body.dark-theme .navbar a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        body.dark-theme .name-style {
+            color: #6f9ecf;
+        }
+
+        body.dark-theme .section-heading {
+            color: #d0d0d0;
+            border-left-color: #e6b800;
+        }
+
+        body.dark-theme .footer {
+            color: #bbbbbb;
+        }
+
+        body.dark-theme p,
+        body.dark-theme td,
+        body.dark-theme th,
+        body.dark-theme strong {
+            color: #a7a0a0;
+        }
+
+        body.dark-theme papertitle {
+            color: #6d8bac !important;
+        }
+
+        p, td {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        th, a {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        strong {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        papertitle {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .name-style {
+            font-family: 'Lato', sans-serif;
+            font-size: 34px;
+            font-weight: bold;
+            color: #111827;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .project-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .project-table td {
+            padding: 20px;
+            vertical-align: top;
+            border: none;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+        }
+
+        hr.styled {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #1478dd, #f09228);
+            margin: 20px auto;
+            width: 95%;
+        }
+
+        .navbar {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: transparent;
+            color: #2563eb;
+        }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .theme-toggle button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            padding: 10px;
+        }
+
+        body.dark-theme .theme-toggle button {
+            color: #d0d0d0;
+        }
+
+        .theme-toggle button:hover {
+            color: #2563eb;
+        }
+
+        body.dark-theme .theme-toggle button:hover {
+            color: #e6b800;
+        }
+
+        .navbar, .nav-links, .theme-toggle {
+            box-sizing: border-box;
+        }
+
+        .section {
+            padding-top: 60px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .section-heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #111827;
+            border-left: 4px solid #2563eb;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            color: #062a4b;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: right;
+            color: #888;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 12px;
+        }
+
+        h3 {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 18px;
+            color: #b22013;
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8f0fb;
+            color: #1d4ed8;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 13px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        body.dark-theme .tag {
+            background: #1e3050;
+            color: #6f9ecf;
+        }
+    </style>
+    <link rel="icon" type="image/jpg" href="images/tai-headshot.jpg">
+    <title>Research — Tai Le</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <!-- navigation bar -->
+                <div class="navbar">
+                    <div class="theme-toggle">
+                        <button id="sun-theme" title="Switch to Light Theme"><i class="fas fa-sun"></i></button>
+                        <button id="moon-theme" title="Switch to Dark Theme"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html"><strong>Home</strong></a>
+                        <a href="publications.html"><strong>Publications</strong></a>
+                        <a href="research.html"><strong>Research</strong></a>
+                        <a href="professional_activities.html"><strong>Professional Activities</strong></a>
+                        <a href="contact.html"><strong>Contact</strong></a>
+                    </div>
+                </div>
+
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                    <tr class="section">
+                        <td width="100%" valign="middle">
+                            <h2 class="section-heading">Research Interests</h2>
+                            <div class="about-text">
+                                <p>
+                                    My research focuses on the design and development of wearable and minimally invasive biomedical sensing systems for
+                                    continuous physiological monitoring. I work across the full hardware–software stack: from sensor design, PCB fabrication,
+                                    and firmware to signal processing algorithms and mobile applications. My goal is to enable real-time, unobtrusive health
+                                    monitoring that can function reliably in everyday environments — in the home, clinic, or field.
+                                </p>
+                                <p>
+                                    At MIT, I am investigating nasal interfaces as a sensing platform for mucosal health monitoring and physiological
+                                    intervention. Prior work spans cardiac electrophysiology in zebrafish models, fetal and maternal ECG, and
+                                    continuous blood pressure estimation using ECG–PPG fusion.
+                                </p>
+                            </div>
+
+                            <h2 class="section-heading">Research Projects</h2>
+                            <div class="about-text">
+
+                                <!-- Project 1: Nasal Interface (MIT) -->
+                                <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
+                                    <tr>
+                                        <th colspan="2">Nasal Interface for Mucosal Health Monitoring <em style="font-weight:normal; color:#777;">(MIT Perceptual Engineering Lab, 2026–)</em></th>
+                                    </tr>
+                                    <tr>
+                                        <td width="40%" style="text-align: center; vertical-align: middle;">
+                                            <p style="color: #999; font-style: italic; font-size: 14px;">[Project image to be added]</p>
+                                        </td>
+                                        <td width="60%">
+                                            <p>
+                                                At MIT, I am investigating how nasal interfaces can serve as a continuous sensing platform for mucosal health
+                                                and novel forms of physiological intervention. The nasal cavity offers direct access to mucosal tissue,
+                                                making it a compelling site for monitoring inflammatory state, hydration, and other physiological signals
+                                                that are difficult to capture elsewhere. This project aims to develop wearable nasal devices that can
+                                                operate unobtrusively in everyday contexts.
+                                            </p>
+                                            <p>
+                                                <span class="tag">Wearable sensing</span>
+                                                <span class="tag">Mucosal health</span>
+                                                <span class="tag">Physiological monitoring</span>
+                                                <span class="tag">MIT HEALS</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Project 2: Zebrafish ECG -->
+                                <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
+                                    <tr>
+                                        <th colspan="2">High-Throughput Zebrafish Biosignal Recording System <em style="font-weight:normal; color:#777;">(NIH SBIR Phase 2, $1.6M)</em></th>
+                                    </tr>
+                                    <tr>
+                                        <td width="40%" style="text-align: center; vertical-align: middle;">
+                                            <img src="images/zebrafish-ecg-system.png" style="width:100%; height:auto;" alt="Zebrafish ECG recording system">
+                                        </td>
+                                        <td width="60%">
+                                            <p>
+                                                Zebrafish have a unique capacity for cardiac regeneration — they can fully recover from 20% ventricular
+                                                injury — making them an ideal model organism for studying cardiac disease and drug response.
+                                                I designed and built a high-throughput ECG recording system capable of simultaneously collecting
+                                                biosignals from multiple awake zebrafish. The system integrates custom PCB hardware, firmware,
+                                                a mobile Android application, and perfusion apparatus for sustained recordings.
+                                            </p>
+                                            <p>
+                                                This platform secured a <strong>NIH SBIR Phase 2 grant ($1.6 million)</strong> and has been deployed
+                                                for cardiac regeneration studies and drug screening pipelines. Open-source firmware and PCB design files
+                                                are available on <a href="https://github.com/taile2007">GitHub</a>.
+                                            </p>
+                                            <p>
+                                                <span class="tag">ECG acquisition</span>
+                                                <span class="tag">Zebrafish model</span>
+                                                <span class="tag">PCB design</span>
+                                                <span class="tag">C/C++</span>
+                                                <span class="tag">Android</span>
+                                                <span class="tag">MATLAB</span>
+                                                <span class="tag">Altium</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Project 3: Fetal/Maternal ECG -->
+                                <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
+                                    <tr>
+                                        <th colspan="2">Fetal/Maternal ECG Home Monitoring Device <em style="font-weight:normal; color:#777;">(UCI Beall Applied Innovation, $80K)</em></th>
+                                    </tr>
+                                    <tr>
+                                        <td width="40%" style="text-align: center; vertical-align: middle;">
+                                            <p style="color: #999; font-style: italic; font-size: 14px;">[Add fetal ECG device image]</p>
+                                        </td>
+                                        <td width="60%">
+                                            <p>
+                                                I designed a flexible patch for continuous, home-based monitoring of both fetal and maternal ECG signals.
+                                                The device transmits data over Bluetooth to a mobile application, which synchronizes to a cloud server
+                                                for remote physician review. Signal extraction uses a combination of independent component analysis
+                                                and template subtraction to isolate the fetal signal from the maternal abdominal recording.
+                                            </p>
+                                            <p>
+                                                This system received a <strong>Proof of Product (POP) grant of $80,000</strong> from UCI Beall Applied
+                                                Innovation and was validated on 10 pregnant women at UCI Medical Center.
+                                                Research was featured in <strong>IEEE Spectrum</strong>.
+                                            </p>
+                                            <p>
+                                                <span class="tag">Fetal ECG</span>
+                                                <span class="tag">Wearable patch</span>
+                                                <span class="tag">Bluetooth</span>
+                                                <span class="tag">Rigid-flex PCB</span>
+                                                <span class="tag">Signal processing</span>
+                                                <span class="tag">iOS / Android</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Project 4: Blood Pressure -->
+                                <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
+                                    <tr>
+                                        <th colspan="2">Integrated ECG + PPG Continuous Blood Pressure Monitoring</th>
+                                    </tr>
+                                    <tr>
+                                        <td width="40%" style="text-align: center; vertical-align: middle;">
+                                            <p style="color: #999; font-style: italic; font-size: 14px;">[Add blood pressure device image]</p>
+                                        </td>
+                                        <td width="60%">
+                                            <p>
+                                                I developed a combined ECG and photoplethysmography (PPG) wearable that estimates blood pressure
+                                                continuously using pulse transit time (PTT) correlation. The device records simultaneous ECG and PPG
+                                                signals, extracts the PTT, and maps it to blood pressure via an individual calibration model.
+                                                Hardware is built around the STM32F103 microcontroller with custom Altium-designed PCBs
+                                                and 3D-printed enclosures.
+                                            </p>
+                                            <p>
+                                                The prototype was validated against a commercial ECG reference system, and findings contributed to
+                                                a comprehensive <strong>methodological review published in IEEE Access (106+ citations)</strong>
+                                                covering non-invasive blood pressure measurement techniques.
+                                            </p>
+                                            <p>
+                                                <span class="tag">Blood pressure</span>
+                                                <span class="tag">ECG + PPG</span>
+                                                <span class="tag">Pulse transit time</span>
+                                                <span class="tag">STM32</span>
+                                                <span class="tag">Altium</span>
+                                                <span class="tag">MATLAB</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Project 5: MD-Link -->
+                                <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
+                                    <tr>
+                                        <th colspan="2">MD-Link: Portable ECG Heart Rate Monitor <em style="font-weight:normal; color:#777;">(Texas Instruments Innovation Challenge, 3rd Place National)</em></th>
+                                    </tr>
+                                    <tr>
+                                        <td width="40%" style="text-align: center; vertical-align: middle;">
+                                            <p style="color: #999; font-style: italic; font-size: 14px;">[Add MD-Link device image]</p>
+                                        </td>
+                                        <td width="60%">
+                                            <p>
+                                                MD-Link is a portable cardiac monitoring system designed for clinical and home use.
+                                                It features dual mobile applications — one for the patient and one for the physician —
+                                                synchronized via a cloud server. The system performs automated ECG analysis for early
+                                                anomaly detection and real-time alerts. Hardware uses a custom multi-layer PCB with
+                                                ARM Cortex-M microcontroller, and the enclosure is 3D-printed.
+                                            </p>
+                                            <p>
+                                                MD-Link was selected as <strong>3rd place in the Texas Instruments Innovation Challenge
+                                                (National Final)</strong> and validated in clinical trials with over 200 participants,
+                                                completing both engineering and design validation phases.
+                                            </p>
+                                            <p>
+                                                <span class="tag">ECG monitoring</span>
+                                                <span class="tag">ARM Cortex-M</span>
+                                                <span class="tag">Android / iOS</span>
+                                                <span class="tag">Cloud sync</span>
+                                                <span class="tag">3D printing</span>
+                                                <span class="tag">Altium</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Project 6: Signal Processing -->
+                                <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
+                                    <tr>
+                                        <th colspan="2">Biosignal Processing: Noise Removal and Feature Extraction</th>
+                                    </tr>
+                                    <tr>
+                                        <td width="40%" style="text-align: center; vertical-align: middle;">
+                                            <p style="color: #999; font-style: italic; font-size: 14px;">[Add signal processing figure]</p>
+                                        </td>
+                                        <td width="60%">
+                                            <p>
+                                                Biological signals such as ECG in zebrafish are typically in the microvolt range and overlap
+                                                in frequency with motion artifacts from gill movement. I developed adaptive filtering algorithms
+                                                using wavelet decomposition to separate the signal of interest from noise in both zebrafish ECG
+                                                and fetal ECG recordings.
+                                            </p>
+                                            <p>
+                                                These algorithms are implemented in MATLAB and C/C++ for real-time embedded processing and
+                                                are released as open-source on <a href="https://github.com/taile2007">GitHub</a>.
+                                                They form the signal processing core of both the zebrafish recording platform and the
+                                                fetal/maternal ECG monitoring device.
+                                            </p>
+                                            <p>
+                                                <span class="tag">Wavelet transform</span>
+                                                <span class="tag">Adaptive filtering</span>
+                                                <span class="tag">MATLAB</span>
+                                                <span class="tag">Embedded C</span>
+                                                <span class="tag">Real-time DSP</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="footer">Last updated: June 2026</p>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        const sunButton = document.getElementById('sun-theme');
+        const moonButton = document.getElementById('moon-theme');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-theme');
+            sunButton.style.display = 'inline';
+            moonButton.style.display = 'none';
+        } else {
+            body.classList.remove('dark-theme');
+            sunButton.style.display = 'none';
+            moonButton.style.display = 'inline';
+        }
+
+        sunButton.addEventListener('click', () => {
+            body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            sunButton.style.display = 'none';
+            moonButton.style.display = 'inline';
+        });
+
+        moonButton.addEventListener('click', () => {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            sunButton.style.display = 'inline';
+            moonButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

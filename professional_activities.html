@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000">
+    <style type="text/css">
+        html, body {
+            overflow-y: scroll;
+        }
+
+        a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            background: #ffffff;
+            color: #252020;
+            transition: color 0.3s;
+        }
+
+        body.dark-theme {
+            background: #1a1a1a;
+            color: #d0d0d0;
+        }
+
+        body.dark-theme a {
+            color: #6f9ecf;
+        }
+
+        body.dark-theme a:focus,
+        body.dark-theme a:hover {
+            color: #e6b800;
+        }
+
+        body.dark-theme .navbar a {
+            color: #d0d0d0;
+        }
+
+        body.dark-theme .navbar a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        body.dark-theme .name-style {
+            color: #6f9ecf;
+        }
+
+        body.dark-theme .section-heading {
+            color: #d0d0d0;
+            border-left-color: #e6b800;
+        }
+
+        body.dark-theme .footer {
+            color: #bbbbbb;
+        }
+
+        body.dark-theme p,
+        body.dark-theme td,
+        body.dark-theme th,
+        body.dark-theme strong {
+            color: #a7a0a0;
+        }
+
+        body.dark-theme papertitle {
+            color: #6d8bac !important;
+        }
+
+        p, td {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        th, a {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        strong {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        papertitle {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .name-style {
+            font-family: 'Lato', sans-serif;
+            font-size: 34px;
+            font-weight: bold;
+            color: #111827;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        hr.styled {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #1478dd, #f09228);
+            margin: 20px auto;
+            width: 95%;
+        }
+
+        .navbar {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: transparent;
+            color: #2563eb;
+        }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .theme-toggle button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            padding: 10px;
+        }
+
+        body.dark-theme .theme-toggle button {
+            color: #d0d0d0;
+        }
+
+        .theme-toggle button:hover {
+            color: #2563eb;
+        }
+
+        body.dark-theme .theme-toggle button:hover {
+            color: #e6b800;
+        }
+
+        .navbar, .nav-links, .theme-toggle {
+            box-sizing: border-box;
+        }
+
+        .section {
+            padding-top: 60px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .section-heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #111827;
+            border-left: 4px solid #2563eb;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: right;
+            color: #888;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 12px;
+        }
+
+        h3 {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 18px;
+            color: #b22013;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="icon" type="image/jpg" href="images/tai-headshot.jpg">
+    <title>Professional Activities — Tai Le</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <!-- navigation bar -->
+                <div class="navbar">
+                    <div class="theme-toggle">
+                        <button id="sun-theme" title="Switch to Light Theme"><i class="fas fa-sun"></i></button>
+                        <button id="moon-theme" title="Switch to Dark Theme"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html"><strong>Home</strong></a>
+                        <a href="publications.html"><strong>Publications</strong></a>
+                        <a href="research.html"><strong>Research</strong></a>
+                        <a href="professional_activities.html"><strong>Professional Activities</strong></a>
+                        <a href="contact.html"><strong>Contact</strong></a>
+                    </div>
+                </div>
+
+                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                    <tr class="section">
+                        <td width="100%" valign="middle">
+                            <h2 class="section-heading">Professional Activities</h2>
+
+                            <!-- Reviewer Section -->
+                            <h3 style="font-size: 18px; color: #b22013; margin-top: 20px;">Reviewer</h3>
+                            <p>I have served as a reviewer for the following journals and conferences:</p>
+
+                            <p>
+                                <span>&#x25cf;</span> &nbsp; <strong>Journals</strong>:
+                                <em>IEEE Transactions on Instrumentation and Measurement</em>,
+                                <em>Biosensors and Bioelectronics</em>,
+                                <em>IEEE Sensors Journal</em>,
+                                <em>Sensors (MDPI)</em>,
+                                <em>IEEE Access</em>,
+                                <em>Journal of Molecular and Cellular Cardiology</em>,
+                                <em>Technologies (MDPI)</em>
+                            </p>
+
+                            <p>
+                                <span>&#x25cf;</span> &nbsp; <strong>Conferences</strong>:
+                                <em>IEEE Engineering in Medicine and Biology Conference (EMBC)</em>,
+                                <em>IEEE SENSORS Conference</em>,
+                                <em>IEEE International Microwave Biomedical Conference (IMBioC)</em>
+                            </p>
+
+                            <!-- Oral Presentations -->
+                            <h3 style="font-size: 18px; color: #b22013; margin-top: 20px;">Oral Presentations</h3>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <em>Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC)</em> — 2020
+                            </p>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <em>IEEE MTT-S International Microwave Biomedical Conference (IMBioC)</em> — 2018, 2019
+                            </p>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <em>Health Technology Assessment International (HTAi) Meeting</em> — 2018
+                            </p>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <em>IEEE Sixth International Conference on Communications and Electronics (ICCE)</em> — 2016
+                            </p>
+
+                            <!-- Principal Investigator -->
+                            <h3 style="font-size: 18px; color: #b22013; margin-top: 20px;">Principal Investigator</h3>
+                            <p>I have served as principal investigator on the following funded projects:</p>
+
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <strong>Nasal Interface for Mucosal Health Monitoring</strong> —
+                                Biswas Fellowship project, MIT Perceptual Engineering Lab (2026–)
+                            </p>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <strong>High-Throughput Zebrafish Biosignal Recording System</strong> —
+                                NIH SBIR Phase 2 ($1.6M), UC Irvine Hero Lab (2022)
+                            </p>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                <strong>Home-Based Fetal/Maternal ECG Monitoring</strong> —
+                                UCI Beall Applied Innovation Proof of Product Grant ($80K), UC Irvine (2021)
+                            </p>
+
+                            <!-- Teaching & Mentoring -->
+                            <h3 style="font-size: 18px; color: #b22013; margin-top: 20px;">Teaching &amp; Mentoring</h3>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                Mentored undergraduate and graduate students on PCB design, embedded firmware, and biosignal processing at UC Irvine Hero Lab.
+                            </p>
+                            <p>
+                                <span>&#x25cf;</span> &nbsp;
+                                Open-source contributor: firmware, PCB designs, and signal processing code from lab projects are publicly available on
+                                <a href="https://github.com/taile2007">GitHub</a>.
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="footer">Last updated: June 2026</p>
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        const sunButton = document.getElementById('sun-theme');
+        const moonButton = document.getElementById('moon-theme');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-theme');
+            sunButton.style.display = 'inline';
+            moonButton.style.display = 'none';
+        } else {
+            body.classList.remove('dark-theme');
+            sunButton.style.display = 'none';
+            moonButton.style.display = 'inline';
+        }
+
+        sunButton.addEventListener('click', () => {
+            body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            sunButton.style.display = 'none';
+            moonButton.style.display = 'inline';
+        });
+
+        moonButton.addEventListener('click', () => {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            sunButton.style.display = 'inline';
+            moonButton.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

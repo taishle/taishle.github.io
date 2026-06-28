@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1000">
+    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+    <style type="text/css">
+        html, body {
+            overflow-y: scroll; /* Always show scrollbar to maintain consistent width */
+        }
+
+        a {
+            color: #1478dd;
+            text-decoration: none;
+        }
+        
+        a:focus,
+        a:hover {
+            color: #f09228;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+            background: #f5f5f5;
+            color: #252020;
+            transition:  color 0.3s;
+        }
+        
+        body.dark-theme {
+            background: #1a1a1a;
+            color: #d0d0d0;
+        }
+        
+        body.dark-theme a {
+            color: #6f9ecf;
+        }
+        
+        body.dark-theme a:focus,
+        body.dark-theme a:hover {
+            color: #e6b800;
+        }
+        
+        body.dark-theme .navbar a {
+            color: #d0d0d0;
+        }
+        
+        body.dark-theme .navbar a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        body.dark-theme .name-style {
+            color: #6f9ecf;
+        }
+        
+        body.dark-theme .section-heading {
+            color: #d0d0d0;
+            border-left-color: #e6b800;
+        }
+        
+        body.dark-theme .footer {
+            color: #bbbbbb;
+        }
+        
+        body.dark-theme p, 
+        body.dark-theme td, 
+        body.dark-theme th, 
+        body.dark-theme strong {
+            color: #a7a0a0;
+        }
+        
+        body.dark-theme papertitle {
+            color: #6d8bac !important;
+        }
+        
+        body.dark-theme .about-text span[style*="background-color: #b9e778"] {
+            background-color: #3a5a3a !important;
+            color: #d0d0d0 !important;
+        }
+
+        p, td {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        th, a {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        
+        strong {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        
+        heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 22px;
+        }
+        
+        papertitle {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        name {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 32px;
+            display: block;
+            text-align: center;
+        }
+
+        .name-style {
+            font-family: 'Lato', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #062a4b;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .one {
+            width: 160px;
+            height: 160px;
+            position: relative;
+        }
+        
+        .two {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -webkit-transition: opacity .2s ease-in-out;
+        }
+        
+        .fade {
+            transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -webkit-transition: opacity .2s ease-in-out;
+        }
+        
+        span.highlight {
+            background-color: #ffffd0;
+        }
+
+        .project-table {
+            width: 95%;
+            border-collapse: collapse;
+            border-bottom: 1px solid black;
+        }
+
+        .project-table td {
+            padding: 20px;
+            width: 50%;
+            vertical-align: middle;
+            border: none;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+        }
+
+        hr.styled {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #1478dd, #f09228);
+            margin: 20px auto;
+            width: 95%;
+        }
+
+        .navbar {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .theme-toggle button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            padding: 10px;
+        }
+
+        body.dark-theme .theme-toggle button {
+            color: #d0d0d0;
+        }
+
+        .theme-toggle button:hover {
+            color: #f09228;
+        }
+
+        body.dark-theme .theme-toggle button:hover {
+            color: #e6b800;
+        }
+        
+        .navbar, .nav-links, .theme-toggle {
+            box-sizing: border-box;
+        }
+        
+        .section {
+            padding-top: 60px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 2.0;
+            text-align: justify;
+        }
+
+        .section-heading {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #010b15;
+            border-left: 4px solid #f09228;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        h3 {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 18px;
+            color: #b22013;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="icon" type="image/jpg" href="images/icon.jpg">
+    <title>Tan-Hanh Pham</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+
+<body>
+    <table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <!-- navigation bar -->
+                <div class="navbar">
+                    <div class="theme-toggle">
+                        <button id="sun-theme" title="Switch to Light Theme"><i class="fas fa-sun"></i></button>
+                        <button id="moon-theme" title="Switch to Dark Theme"><i class="fas fa-moon"></i></button>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html"><strong>Home</strong></a>
+                        <a href="publications.html"><strong>Publications</strong></a>
+                        <a href="research.html"><strong>Research</strong></a>
+                        <a href="professional_activities.html"><strong>Professional Activities</strong></a>
+                        <!-- <a href="awards.html"><strong>Awards and Honors</strong></a> -->
+                        <a href="blogs.html"><strong>Blogs</strong></a>
+                        <a href="contact.html"><strong>Contact</strong></a>
+                    </div>
+                </div>
+
+                  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                        <tr class="section">
+                              <td width="100%" valign="middle">
+                                    <h2 class="section-heading">Awards and Honors</h2>
+                                    <!-- <div class="about-text"> -->
+                                          <p style="text-align: left;">
+                                                <span>&#x25cf;</span> &nbsp; <b>[2024]</b> &nbsp; The College's Award for Outstanding Graduate Student of the Year, Florida Tech, 2023.
+                                          </p>
+                                          <p style="text-align: left;">    
+                                                <span>&#x25cf;</span> &nbsp;  <b>[2022]</b> &nbsp; Best Paper Award at the 18th International Conference on Intelligent Unmanned Systems (ICIUS) at Tokushima University, Japan, 2022. 
+                                          </p>
+                                          <p style="text-align: left;">    
+                                                <span>&#x25cf;</span> &nbsp; <b>[2018 - 2019]</b> &nbsp; Merit Scholarships for outstanding students at HCMC University of Technology and Education.
+                                          </p>
+                                    <!-- </div> -->
+                              </td>
+                        </tr>
+                  </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        const sunButton = document.getElementById('sun-theme');
+        const moonButton = document.getElementById('moon-theme');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-theme');
+            sunButton.style.display = 'inline';
+            moonButton.style.display = 'none';
+        } else {
+            body.classList.remove('dark-theme');
+            sunButton.style.display = 'none';
+            moonButton.style.display = 'inline';
+        }
+
+        sunButton.addEventListener('click', () => {
+            body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            sunButton.style.display = 'none';
+            moonButton.style.display = 'inline';
+        });
+
+        moonButton.addEventListener('click', () => {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            sunButton.style.display = 'inline';
+            moonButton.style.display = 'none';
+        });
+    </script>
+
+    
+
+</body>
+</html>	
+			     

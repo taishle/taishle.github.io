@@ -349,15 +349,15 @@
                             <h2 class="section-heading">Research Interests</h2>
                             <div class="about-text">
                                 <p>
-                                    My research focuses on the design and development of wearable and minimally invasive biomedical sensing systems for
-                                    continuous physiological monitoring. I work across the full hardware–software stack: from sensor design, PCB fabrication,
-                                    and firmware to signal processing algorithms and mobile applications. My goal is to enable real-time, unobtrusive health
-                                    monitoring that can function reliably in everyday environments — in the home, clinic, or field.
+                                    My research centers on the design and development of wearable biomedical sensing systems for continuous physiological
+                                    monitoring. I work across the sensing and computation pipeline — from analog front-end circuit design, PCB fabrication,
+                                    and embedded firmware development to digital signal processing algorithms and mobile health applications — with the aim
+                                    of enabling unobtrusive, real-time health monitoring suitable for ambulatory and clinical deployment.
                                 </p>
                                 <p>
                                     At MIT, I am investigating nasal interfaces as a sensing platform for mucosal health monitoring and physiological
-                                    intervention. Prior work spans cardiac electrophysiology in zebrafish models, fetal and maternal ECG, and
-                                    continuous blood pressure estimation using ECG–PPG fusion.
+                                    intervention. My prior work includes cardiac electrophysiology in zebrafish models, fetal and maternal ECG acquisition
+                                    and signal extraction, and non-invasive continuous blood pressure estimation.
                                 </p>
                             </div>
 
@@ -494,31 +494,28 @@
                                 <!-- Project 5: Blood Pressure -->
                                 <table class="project-table" style="text-align: left;" cellspacing="0" cellpadding="20">
                                     <tr>
-                                        <th colspan="2">Integrated ECG + PPG Continuous Blood Pressure Monitoring</th>
+                                        <th colspan="2">Non-invasive Continuous Blood Pressure Monitoring</th>
                                     </tr>
                                     <tr>
                                         <td width="40%" style="text-align: center; vertical-align: middle;">
-                                            <p style="color: #999; font-style: italic; font-size: 14px;">[Add blood pressure device image]</p>
+                                            <img src="images/Non-invasive-BP.png" class="project-image" alt="Non-invasive continuous blood pressure monitoring">
                                         </td>
                                         <td width="60%">
                                             <p>
-                                                I developed a combined ECG and photoplethysmography (PPG) wearable that estimates blood pressure
-                                                continuously using pulse transit time (PTT) correlation. The device records simultaneous ECG and PPG
-                                                signals, extracts the PTT, and maps it to blood pressure via an individual calibration model.
-                                                Hardware is built around the STM32F103 microcontroller with custom Altium-designed PCBs
-                                                and 3D-printed enclosures.
+                                                I investigated multiple electrophysiological and mechanical sensing modalities — including electrocardiography (ECG),
+                                                photoplethysmography (PPG), speckleplethysmography (SPG), and capacitive pressure sensing — as candidate signal
+                                                sources for continuous non-invasive blood pressure (CNBP) estimation. This work culminated in a comprehensive
+                                                methodological review published in <strong>IEEE Access (106+ citations)</strong> surveying non-invasive blood
+                                                pressure measurement techniques across sensing paradigms. A subsequent commercialization effort was undertaken
+                                                through VenaVitals, focusing on pressure sensing technology as the primary acquisition modality.
                                             </p>
                                             <p>
-                                                The prototype was validated against a commercial ECG reference system, and findings contributed to
-                                                a comprehensive <strong>methodological review published in IEEE Access (106+ citations)</strong>
-                                                covering non-invasive blood pressure measurement techniques.
-                                            </p>
-                                            <p>
-                                                <span class="tag">Blood pressure</span>
-                                                <span class="tag">ECG + PPG</span>
-                                                <span class="tag">Pulse transit time</span>
-                                                <span class="tag">STM32</span>
-                                                <span class="tag">Altium</span>
+                                                <span class="tag">CNBP</span>
+                                                <span class="tag">ECG</span>
+                                                <span class="tag">PPG</span>
+                                                <span class="tag">SPG</span>
+                                                <span class="tag">Capacitive sensing</span>
+                                                <span class="tag">Signal processing</span>
                                                 <span class="tag">MATLAB</span>
                                             </p>
                                         </td>
